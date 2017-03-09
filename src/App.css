@@ -1,0 +1,23 @@
+body{
+    background: #000;
+    color: #fff;
+}
+
+input{
+    display: inline;
+}
+
+.input-group-addon{
+    display: inline;
+}
+
+.app{
+    text-align: center;
+    padding-top: 5%;
+}
+
+.title{
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
