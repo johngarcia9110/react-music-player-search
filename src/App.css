@@ -3,13 +3,7 @@ body{
     color: #fff;
 }
 
-input{
-    display: inline;
-}
 
-.input-group-addon{
-    display: inline;
-}
 
 .app{
     text-align: center;
