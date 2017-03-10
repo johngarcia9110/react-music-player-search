@@ -1,5 +1,5 @@
 body{
-    background: #000;
+    background: #2D3047;
     color: #fff;
 }
 
@@ -14,4 +14,62 @@ body{
     font-size: 35px;
     font-weight: bold;
     margin-bottom: 16px;
+}
+
+.profile{
+    background: #EF8354;
+    padding: 20px;
+    color: black;
+    border-radius: 4px;
+}
+
+.profile-picture{
+    max-width: 250px;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    margin-bottom: 10px;
+}
+
+.profile-name{
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    position: relative;
+    width: 100%;
+}
+.profile-name h2{
+    background: #EF8354;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    padding: 0 12px;
+}
+.profile-name:before{
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid #FFF;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.profile-followers{
+    font-size: 1.4em;
+    font-weight: bolder;
+    color: #2D3047;
+    margin-bottom: 10px;
+}
+
+.profile-genres{
+    font-size: 1.2em;
+    color: #2D3047;
+    text-align: left;
+    background: #eca07f;
+    padding: 12px;
+    border: 1px solid #2d3047;
+    border-radius: 4px;
+
 }

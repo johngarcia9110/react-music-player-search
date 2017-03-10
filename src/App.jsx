@@ -42,10 +42,16 @@ class App extends Component{
                         </InputGroup.Addon>
                     </InputGroup>
                 </FormGroup>
-                <Profile artist={this.state.artist}/>
-                <div className="song-gallery">
-                    Song Gallery
-                </div>
+                {
+                    this.state.artist !== null 
+                   ? <div> 
+                        <Profile artist={this.state.artist}/>
+                        <div className="song-gallery col-sm-8">
+                            Song Gallery
+                        </div>
+                    </div>
+                    : <div></div>
+                }
             </div>
 
         )
