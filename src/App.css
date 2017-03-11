@@ -10,18 +10,21 @@ body{
 .header{
     padding: 34px 0px;
     text-align: left;
-    border-bottom: 4px solid #4b5073;
+    border-bottom: 4px solid #359c82;
     margin-bottom: 40px;
+    box-shadow: 0px 0px 33px 0px black;
 }
 
 .container{
     background: #212333;
     padding-bottom: 35px;
+    overflow: hidden;
 }
 
 .title{
     font-size: 35px;
     font-weight: bold;
+    color: #ffffff;
 }
 .input-group-addon{
     cursor: pointer;
@@ -34,7 +37,7 @@ body{
 }
 
 .profile{
-    background: #dcdcdc;
+    background: #ffffff;
     padding: 20px;
     color: black;
     border-radius: 4px;
@@ -43,7 +46,7 @@ body{
 .profile-picture{
     max-width: 250px;
     border-radius: 50%;
-    border: 2px solid #FFF;
+    border: 4px solid #359c82;
     margin-bottom: 10px;
 }
 
@@ -57,7 +60,7 @@ body{
     width: 100%;
 }
 .profile-name h2{
-    background: #dcdcdc;
+    background: #ffffff;
     margin: 0;
     position: relative;
     display: inline-block;
@@ -67,16 +70,17 @@ body{
     content: '';
     display: block;
     width: 100%;
-    border-bottom: 2px solid #2D3047;
+    border-bottom: 4px solid #359c82;
     position: absolute;
     top: 50%;
     left: 0;
+    border-radius: 4px;
 }
 
 .profile-followers{
     font-size: 1.4em;
     font-weight: bolder;
-    color: #2D3047;
+    color: #359c82;
     margin-bottom: 10px;
 }
 
@@ -84,8 +88,54 @@ body{
     font-size: 1.2em;
     color: #2D3047;
     text-align: left;
-    background: #9E9E9E;
+    background: #e6e6e6;
     padding: 12px;
     border-radius: 4px;
+    border: 2px solid #2D3047;
 
+}
+
+/*Gallery Component*/
+
+.song-gallery{
+
+}
+
+.gallery-wrapper{
+    float: left;
+    background: rgba(255, 255, 255, 0.84);
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.song-gallery h3{
+    margin: 0;
+    margin-bottom: 16px;
+    padding: 20px;
+    background: #359c82;
+    color: #ffffff;
+    border-bottom: 4px solid #226b59;
+    box-shadow: 0px 4px 160px 43px rgba(33, 35, 51, 0.56);
+    position: relative;
+    text-transform: uppercase;
+}
+
+.track{
+    margin-bottom: 10px;
+}
+
+.track-image{
+    max-width: 100%;
+    cursor: pointer;
+    border-radius: 4px 4px 0px 0px;
+    position: relative;
+}
+
+.track-title{
+    color: white;
+    background: black;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0px 0px 4px 4px;
 }
