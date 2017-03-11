@@ -139,3 +139,60 @@ body{
     font-weight: bold;
     border-radius: 0px 0px 4px 4px;
 }
+
+.track-play{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: block;
+    top: 50%;
+    left: 50%;
+    background: #359c82;
+    margin-top: -74px;
+    margin-left: -50px;
+    border-radius: 50%;
+    border: 3px solid #212333;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.track:hover .track-play{
+    animation: play-up 200ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes play-up{
+    0%{
+        opacity: 0;
+        top: 100%;
+    }
+    100%{
+        opacity: 0.98;
+        top: 50%;
+    }
+}
+
+.track-play-icon{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 50px;
+    line-height: 50px;
+    margin-left: -15px;
+    margin-top: -22px;
+    color: #2d3047;
+    cursor: pointer;
+}
+
+.track-pause-icon{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    margin-left: -14px;
+    margin-top: -22px;
+    color: #2d3047;
+    cursor: pointer;
+}
