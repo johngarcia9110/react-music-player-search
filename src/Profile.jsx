@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
 class Profile extends Component {
+
     render(){
         let artist = {name : '', followers : { total : '' }, images : [ {url : ''} ], genres : [] };
+        let relatedArtists = [];
         artist = this.props.artist !== null ? this.props.artist : artist;
+        relatedArtists = this.props.relatedArtists !== null ? this.props.relatedArtists : relatedArtists;
+        console.log(relatedArtists);
         return (
             <div className="col-sm-4">
                 <div className="profile">
@@ -22,6 +26,18 @@ class Profile extends Component {
                         }
                     </div>
                 </div>
+                <div className="related-artists">
+                    <h4>Related Artists: </h4>
+                    <ul className="related-artists-list">
+                    {
+                        relatedArtists.map((artist, index) =>{
+                            return(
+                                <li key={index}>{artist.name}</li>
+                            )
+                        })
+                    }
+                    </ul>
+                </div>    
             </div>
         )
     }

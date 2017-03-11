@@ -41,6 +41,7 @@ body{
     padding: 20px;
     color: black;
     border-radius: 4px;
+    margin-bottom: 14px;
 }
 
 .profile-picture{
@@ -195,4 +196,15 @@ body{
     margin-top: -22px;
     color: #2d3047;
     cursor: pointer;
+}
+
+
+/*Related Artists List*/
+
+.related-artists{
+    background: white;
+    color: #2d3047;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: left;
 }

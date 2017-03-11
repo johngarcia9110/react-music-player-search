@@ -9,16 +9,16 @@ class App extends Component{
         this.state= {
             query : '',
             artist : null,
-            tracks : []
-        }
+            tracks : [],
+            relatedArtists : null
+            
+        };
     }
 
     search(){
         const BASE_URL = 'https://api.spotify.com/v1/search?';
         let FETCH_URL = `${BASE_URL}q=${this.state.query}&type=artist&limit=1`;
         const ALBUM_URL = 'https://api.spotify.com/v1/artists/';
-
-        console.log('FETCH_URL',FETCH_URL);
         fetch(FETCH_URL,{
             method : 'GET'
         }).then(response => response.json())
@@ -26,6 +26,18 @@ class App extends Component{
             const artist = json.artists.items[0];
             this.setState({artist});
 
+            //Get Related Artists
+            FETCH_URL = `${ALBUM_URL}${artist.id}/related-artists`;
+            fetch(FETCH_URL, {
+                method: 'GET'
+            }).then(response => response.json())
+            .then(json => {
+                const { artists } = json;
+                this.setState({relatedArtists : artists});
+                
+            })
+
+            //Get top tracks:
             FETCH_URL = `${ALBUM_URL}${artist.id}/top-tracks?country=US&`;
             fetch(FETCH_URL, {
                 method : 'GET'
@@ -65,7 +77,9 @@ class App extends Component{
                     {
                         this.state.artist !== null 
                     ? <div> 
-                            <Profile artist={this.state.artist}/>
+                            <Profile artist={this.state.artist} 
+                            relatedArtists={this.state.relatedArtists}
+                            />
                             <div className="song-gallery col-sm-8">
                                 <Gallery tracks={this.state.tracks}/>
                             </div>

@@ -33,7 +33,6 @@ class Gallery extends Component {
                 <h3>Top tracks:</h3>
                 {
                     tracks.map((track, index) => {
-                        console.log('track', track);
                         const trackImage = track.album.images[0].url;
                         return(
                             <div key={index} 
@@ -44,7 +43,7 @@ class Gallery extends Component {
                                 <div className="track-play">
                                     <div className="track-play-inner">
                                         {
-                                            this.state.playingUrl === track.preview_url 
+                                            this.state.playingUrl === track.preview_url && this.state.playing === true
                                             ? <span className="track-pause-icon">| |</span>
                                             : <span className="track-play-icon">&#9654;</span>
                                         }
