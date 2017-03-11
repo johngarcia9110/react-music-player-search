@@ -3,21 +3,38 @@ body{
     color: #fff;
 }
 
-
-
 .app{
     text-align: center;
-    padding-top: 5%;
+}
+
+.header{
+    padding: 34px 0px;
+    text-align: left;
+    border-bottom: 4px solid #4b5073;
+    margin-bottom: 40px;
+}
+
+.container{
+    background: #212333;
+    padding-bottom: 35px;
 }
 
 .title{
     font-size: 35px;
     font-weight: bold;
-    margin-bottom: 16px;
+}
+.input-group-addon{
+    cursor: pointer;
+}
+.search-text{
+    font-family: arial;
+    line-height: 18px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .profile{
-    background: #EF8354;
+    background: #dcdcdc;
     padding: 20px;
     color: black;
     border-radius: 4px;
@@ -33,14 +50,14 @@ body{
 .profile-name{
     font-weight: bold;
     font-size: 2em;
-    color: white;
+    color: #2D3047;
     display: inline-block;
     padding: 5px 10px;
     position: relative;
     width: 100%;
 }
 .profile-name h2{
-    background: #EF8354;
+    background: #dcdcdc;
     margin: 0;
     position: relative;
     display: inline-block;
@@ -50,7 +67,7 @@ body{
     content: '';
     display: block;
     width: 100%;
-    border-bottom: 2px solid #FFF;
+    border-bottom: 2px solid #2D3047;
     position: absolute;
     top: 50%;
     left: 0;
@@ -67,9 +84,8 @@ body{
     font-size: 1.2em;
     color: #2D3047;
     text-align: left;
-    background: #eca07f;
+    background: #9E9E9E;
     padding: 12px;
-    border: 1px solid #2d3047;
     border-radius: 4px;
 
 }
